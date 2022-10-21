@@ -1,0 +1,128 @@
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background: $header-gradient;
+}
+
+.header__container {
+  max-width: 1220px;
+  margin: 0 auto;
+  min-height: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 60px;
+
+  @include vp-1023 {
+    padding: 0 40px 0 26px;
+    min-height: 100px;
+  }
+
+  @include vp-767 {
+    padding: 0 12px 0 10px;
+    min-height: 70px;
+  }
+}
+
+.header__logo {
+  padding-bottom: 5px;
+  cursor: pointer;
+
+  @include vp-1023 {
+    padding: 0;
+    margin-top: -3px;
+  }
+
+  @include vp-767 {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.header__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 38px;
+  width: 460px;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+
+  @include vp-1023 {
+    align-items: center;
+    width: 97px;
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    align-items: stretch;
+    margin: 0;
+  }
+}
+
+.header__link {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  padding-left: 35px;
+  position: relative;
+  color: $color-alice-blue;
+  cursor: pointer;
+
+  &--mail::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0;
+    top: 0;
+    background: url("../../img/svg/icon-mail.svg") no-repeat center;
+  }
+
+  &--phone::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0;
+    top: 0;
+    background: url("../../img/svg/icon-phone.svg") no-repeat center;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.header__button {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid $color-alice-blue-border;
+  border-radius: 3px;
+  min-width: 160px;
+  margin-bottom: 10px;
+  padding: 7px 15px 12px 15px;
+  background-color: transparent;
+  user-select: none;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.header__contact-text {
+  @include vp-1023 {
+    display: none;
+  }
+}

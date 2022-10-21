@@ -1,0 +1,13 @@
+.main-container {
+  min-height: 100%;
+}
+
+.main-container__promo {
+  position: relative;
+  margin-top: 100px;
+  color: $color-alice-blue;
+
+  @include vp-1023 {
+    margin-top: 0;
+  }
+}
