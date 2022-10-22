@@ -1,0 +1,134 @@
+.about__wrapper {
+  max-width: 1220px;
+  margin: 0 auto;
+  display: flex;
+  padding-left: 250px;
+  padding-bottom: 120px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 150px;
+    height: 320px;
+    background-image: image-set(url("../../img/2022@2x.webp") 2x, url("../../img/2022.webp") 1x, url("../../img/2022@2x.jpg") 2x, url("../../img/2022.jpg") 1x);
+  }
+
+  @include vp-1023 {
+    padding-bottom: 78px;
+    padding-left: 176px;
+
+    &::before {
+      left: -4px;
+      top: 7px;
+    }
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.about h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 12px;
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 14px;
+  }
+}
+
+.about__info {
+  margin-bottom: 40px;
+
+  @include vp-1023 {
+    margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    margin-bottom: 10px;
+  }
+}
+
+[data-more] {
+  display: none;
+}
+
+[data-mobile] {
+  @include vp-767 {
+    max-height: 170px;
+    overflow: hidden;
+  }
+}
+
+[data-mobile].is-open {
+  @include vp-767 {
+    max-height: 350px;
+  }
+}
+
+[data-more].is-open {
+  display: block;
+}
+
+.about__info p {
+  margin: 0;
+  margin-bottom: 22px;
+  line-height: 22px;
+
+  @include vp-1023 {
+    margin-bottom: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 18px;
+  }
+}
+
+.about__button {
+  width: 180px;
+  min-height: 45px;
+  border: 1px solid $color-deep-sky-blue;
+  border-radius: 3px;
+  color: $color-deep-sky-blue;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
+  user-select: none;
+
+  @include vp-767 {
+    width: 60%;
+    max-width: 160px;
+    min-height: 35px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    border: 1px solid $color-black-pearl-button;
+  }
+
+  &:active {
+    color: $color-default-white;
+    background-color: $color-black-pearl-button;
+  }
+}

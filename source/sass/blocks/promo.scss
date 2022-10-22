@@ -106,6 +106,10 @@
     opacity: 0.8;
   }
 
+  &:active {
+    background-color: $color-black-pearl;
+  }
+
   @include vp-1023 {
     width: 53%;
     max-width: 500px;
