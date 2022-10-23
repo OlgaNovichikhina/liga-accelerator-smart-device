@@ -628,7 +628,7 @@ button,
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0;
 }
 
 .btn {
@@ -652,14 +652,6 @@ button,
 .btn:disabled {
   opacity: 0.5;
   pointer-events: none;
-}
-
-.btn.focus-visible:focus {
-  opacity: 0.8;
-}
-
-.btn.focus-visible:active {
-  opacity: 0.4;
 }
 
 .modal {
@@ -883,12 +875,17 @@ button,
   user-select: none;
 }
 
+.header__button:hover {
+  opacity: 0.8;
+}
+
 .header__button:active {
+  opacity: 1;
   background-color: #00b3ff;
 }
 
 .promo {
-  position: absolute;
+  position: relative;
   background-image: -webkit-image-set(url("../../img/background/background-desktop@2x.webp") 2x, url("../../img/background/background-desktop.webp") 1x, url("../../img/background/background-desktop@2x.jpg") 2x, url("../../img/background/background-desktop.jpg") 1x);
   background-image: image-set("../../img/background/background-desktop@2x.webp" 2x, "../../img/background/background-desktop.webp" 1x, "../../img/background/background-desktop@2x.jpg" 2x, "../../img/background/background-desktop.jpg" 1x);
   background-color: #041827;
@@ -1075,6 +1072,7 @@ button,
   content: "";
   position: absolute;
   left: 0;
+  top: 2px;
   width: 150px;
   height: 320px;
   background-image: -webkit-image-set(url("../../img/2022@2x.webp") 2x, url("../../img/2022.webp") 1x, url("../../img/2022@2x.jpg") 2x, url("../../img/2022.jpg") 1x);
@@ -1086,8 +1084,7 @@ button,
   font-size: 36px;
   line-height: 51px;
   font-weight: 400;
-  margin: 0;
-  margin-bottom: 12px;
+  margin: 0 0 13px;
 }
 
 .about__info {
@@ -1103,17 +1100,15 @@ button,
 }
 
 .about__info p {
-  margin: 0;
-  margin-bottom: 22px;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 22px;
+  color: #041427;
+  margin: 0 0 21px;
 }
 
 .about__button {
-  width: 180px;
-  min-height: 45px;
-  border: 1px solid #00b2ff;
-  border-radius: 3px;
-  color: #00b2ff;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   text-align: center;
@@ -1125,17 +1120,135 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 180px;
+  min-height: 45px;
+  border: 1px solid #00b3ff;
+  border-radius: 3px;
+  color: #00b3ff;
+  background-color: transparent;
 }
 
-.about__button:hover,
-.about__button:focus,
-.about__button:focus-visible {
-  border: 1px solid #041427;
+.about__button:hover {
+  opacity: 0.8;
 }
 
 .about__button:active {
+  opacity: 1;
+  background-color: #041827;
+  color: #f2f5f6;
+}
+
+.services {
+  width: 100%;
+  background-color: #041827;
   color: #ffffff;
-  background-color: #041427;
+}
+
+.services__container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding-top: 64px;
+}
+
+.services h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 55px;
+}
+
+.services p {
+  display: block;
+  margin-top: 47px;
+  margin-left: 40px;
+  max-width: 170px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.services br {
+  display: none;
+}
+
+.services__list {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 85px;
+  padding: 0;
+}
+
+.services__item {
+  position: relative;
+  width: 100%;
+  min-height: 650px;
+}
+
+.services__item ::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  bottom: 0;
+  right: 0;
+  background-color: #00b2ff;
+  background-image: url("../../img/svg/icon-arrow-right.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 3px 0 0 0;
+}
+
+.services__item--production {
+  background-image: -webkit-image-set(url("../../img/services/service-card-1-desktop@2x.webp") 2x, url("../../img/services/service-card-1-desktop.webp") 1x, url("../../img/services/service-card-1-desktop@2x.jpg") 2x, url("../../img/services/service-card-1-desktop.jpg") 1x);
+  background-image: image-set("../../img/services/service-card-1-desktop@2x.webp" 2x, "../../img/services/service-card-1-desktop.webp" 1x, "../../img/services/service-card-1-desktop@2x.jpg" 2x, "../../img/services/service-card-1-desktop.jpg" 1x);
+  background-color: #041827;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.services__item--mounting {
+  background-image: -webkit-image-set(url("../../img/services/service-card-2-desktop@2x.webp") 2x, url("../../img/services/service-card-2-desktop.webp") 1x, url("../../img/services/service-card-2-desktop@2x.jpg") 2x, url("../../img/services/service-card-2-desktop.jpg") 1x);
+  background-image: image-set("../../img/services/service-card-2-desktop@2x.webp" 2x, "../../img/services/service-card-2-desktop.webp" 1x, "../../img/services/service-card-2-desktop@2x.jpg" 2x, "../../img/services/service-card-2-desktop.jpg" 1x);
+  background-color: #041827;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.services__item--accessories {
+  background-image: -webkit-image-set(url("../../img/services/service-card-3-desktop@2x.webp") 2x, url("../../img/services/service-card-3-desktop.webp") 1x, url("../../img/services/service-card-3-desktop@2x.jpg") 2x, url("../../img/services/service-card-3-desktop.jpg") 1x);
+  background-image: image-set("../../img/services/service-card-3-desktop@2x.webp" 2x, "../../img/services/service-card-3-desktop.webp" 1x, "../../img/services/service-card-3-desktop@2x.jpg" 2x, "../../img/services/service-card-3-desktop.jpg" 1x);
+  background-color: #041827;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.services__link {
+  width: 100%;
+  min-width: 350px;
+  min-height: 650px;
+}
+
+.services__mobile-only {
+  display: none;
 }
 
 /* @mixin hover-focus {
@@ -1181,7 +1294,7 @@ button,
 
 @media (min-width: 1920px) {
   .promo {
-    background-size: 100% auto;
+    background-size: cover;
   }
 }
 
@@ -1223,7 +1336,7 @@ button,
   }
 
   .promo {
-    background-size: auto 100%;
+    background-size: cover;
     height: 640px;
     background-position: -123px 0;
   }
@@ -1231,20 +1344,20 @@ button,
   .promo__container h2 {
     font-size: 64px;
     line-height: 75px;
-    margin-left: 50px;
+    margin-left: 26px;
     margin-top: 44px;
     margin-bottom: 3px;
   }
 
   .promo__description {
-    margin-left: 50px;
+    margin-left: 26px;
     margin-bottom: 56px;
   }
 
   .promo__link {
-    width: 53%;
+    width: 57%;
     max-width: 500px;
-    margin-left: 95px;
+    margin-left: 71px;
   }
 
   .main-container__promo {
@@ -1284,12 +1397,13 @@ button,
   }
 
   .about__wrapper {
-    padding-bottom: 78px;
-    padding-left: 176px;
+    padding-bottom: 80px;
+    padding-left: 201px;
+    padding-right: 25px;
   }
 
   .about__wrapper::before {
-    left: -4px;
+    left: 22px;
     top: 7px;
   }
 
@@ -1298,7 +1412,55 @@ button,
   }
 
   .about__info p {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
+  }
+
+  .services__container {
+    padding: 55px 26px 10px 26px;
+  }
+
+  .services h2 {
+    margin-bottom: 40px;
+  }
+
+  .services p {
+    margin-top: 36px;
+    margin-left: 45px;
+  }
+
+  .services br {
+    display: block;
+  }
+
+  .services__list {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+    gap: 29px;
+  }
+
+  .services__item--production {
+    background-image: -webkit-image-set(url("../../img/services/service-card-1-tablet@2x.webp") 2x, url("../../img/services/service-card-1-tablet.webp") 1x, url("../../img/services/service-card-1-tablet@2x.jpg") 2x, url("../../img/services/service-card-1-tablet.jpg") 1x);
+    background-image: image-set("../../img/services/service-card-1-tablet@2x.webp" 2x, "../../img/services/service-card-1-tablet.webp" 1x, "../../img/services/service-card-1-tablet@2x.jpg" 2x, "../../img/services/service-card-1-tablet.jpg" 1x);
+  }
+
+  .services__item--mounting {
+    background-image: -webkit-image-set(url("../../img/services/service-card-2-tablet@2x.webp") 2x, url("../../img/services/service-card-2-tablet.webp") 1x, url("../../img/services/service-card-2-tablet@2x.jpg") 2x, url("../../img/services/service-card-2-tablet.jpg") 1x);
+    background-image: image-set("../../img/services/service-card-2-tablet@2x.webp" 2x, "../../img/services/service-card-2-tablet.webp" 1x, "../../img/services/service-card-2-tablet@2x.jpg" 2x, "../../img/services/service-card-2-tablet.jpg" 1x);
+  }
+
+  .services__item--accessories {
+    background-image: -webkit-image-set(url("../../img/services/service-card-3-tablet@2x.webp") 2x, url("../../img/services/service-card-3-tablet.webp") 1x, url("../../img/services/service-card-3-tablet@2x.jpg") 2x, url("../../img/services/service-card-3-tablet.jpg") 1x);
+    background-image: image-set("../../img/services/service-card-3-tablet@2x.webp" 2x, "../../img/services/service-card-3-tablet.webp" 1x, "../../img/services/service-card-3-tablet@2x.jpg" 2x, "../../img/services/service-card-3-tablet.jpg" 1x);
+  }
+
+  .services__item {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  .services__link {
+    width: 100%;
+    min-height: 250px;
   }
 }
 
@@ -1346,23 +1508,23 @@ button,
     font-size: 36px;
     line-height: 42px;
     margin-top: 14px;
-    margin-left: 25px;
+    margin-left: 8px;
     margin-bottom: 10px;
   }
 
   .promo__description {
     max-width: 410px;
     font-size: 14px;
-    margin-left: 23px;
+    margin-left: 8px;
     margin-bottom: 44px;
   }
 
   .promo__link {
-    width: 84%;
+    width: 94%;
     max-width: 390px;
     min-height: 40px;
-    margin-left: 25px;
-    padding: 10px 37px 10px;
+    margin-left: 9px;
+    padding: 10px 37px;
   }
 
   .promo__text-button {
@@ -1381,7 +1543,7 @@ button,
   .advantages__wrapper {
     padding: 80px 9px 74px;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 45px;
   }
 
   .advantages__list {
@@ -1429,7 +1591,8 @@ button,
   }
 
   .about__wrapper {
-    padding-left: 0;
+    padding-right: 10px;
+    padding-left: 8px;
   }
 
   .about__wrapper::before {
@@ -1447,7 +1610,7 @@ button,
   }
 
   [data-mobile] {
-    max-height: 170px;
+    max-height: 210px;
     overflow: hidden;
   }
 
@@ -1468,10 +1631,58 @@ button,
     font-size: 14px;
     line-height: 16px;
   }
-}
 
-@media (hover: hover) {
-  .btn:hover:not(.focus-visible) {
-    opacity: 0.8;
+  .services__container {
+    padding: 46px 20px 10px 9px;
+  }
+
+  .services h2 {
+    font-size: 28px;
+    line-height: 140.62%;
+    margin-bottom: 30px;
+  }
+
+  .services p {
+    margin-top: 25px;
+    margin-left: 30px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .services__item ::after {
+    width: 40px;
+    height: 40px;
+    background-size: 8%;
+  }
+
+  .services__item--production {
+    background-image: -webkit-image-set(url("../../img/services/service-card-1-mobile@2x.webp") 2x, url("../../img/services/service-card-1-mobile.webp") 1x, url("../../img/services/service-card-1-mobile@2x.jpg") 2x, url("../../img/services/service-card-1-mobile.jpg") 1x);
+    background-image: image-set("../../img/services/service-card-1-mobile@2x.webp" 2x, "../../img/services/service-card-1-mobile.webp" 1x, "../../img/services/service-card-1-mobile@2x.jpg" 2x, "../../img/services/service-card-1-mobile.jpg" 1x);
+  }
+
+  .services__item--mounting {
+    background-image: -webkit-image-set(url("../../img/services/service-card-2-mobile@2x.webp") 2x, url("../../img/services/service-card-2-mobile.webp") 1x, url("../../img/services/service-card-2-mobile@2x.jpg") 2x, url("../../img/services/service-card-2-mobile.jpg") 1x);
+    background-image: image-set("../../img/services/service-card-2-mobile@2x.webp" 2x, "../../img/services/service-card-2-mobile.webp" 1x, "../../img/services/service-card-2-mobile@2x.jpg" 2x, "../../img/services/service-card-2-mobile.jpg" 1x);
+  }
+
+  .services__item--accessories {
+    background-image: -webkit-image-set(url("../../img/services/service-card-3-mobile@2x.webp") 2x, url("../../img/services/service-card-3-mobile.webp") 1x, url("../../img/services/service-card-3-mobile@2x.jpg") 2x, url("../../img/services/service-card-3-mobile.jpg") 1x);
+    background-image: image-set("../../img/services/service-card-3-mobile@2x.webp" 2x, "../../img/services/service-card-3-mobile.webp" 1x, "../../img/services/service-card-3-mobile@2x.jpg" 2x, "../../img/services/service-card-3-mobile.jpg" 1x);
+  }
+
+  .services__item {
+    min-width: 270px;
+  }
+
+  .services__link {
+    min-width: 270px;
+  }
+
+  .services__mobile-only {
+    display: block;
+  }
+
+  .services__title {
+    display: none;
   }
 }
