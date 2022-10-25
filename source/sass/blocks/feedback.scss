@@ -1,0 +1,114 @@
+.feedback {
+  position: relative;
+  min-height: 840px;
+  width: 100%;
+  background-color: $color-deep-sky-blue-polygon;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: rgba(4, 24, 39, 0.5);
+    height: 840px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 100%, 0 0, 50.5% 0);
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 510px;
+    height: 285px;
+    background-image: image-set(url("../../img/paper-airplane@2x.webp") 2x, url("../../img/paper-airplane.webp") 1x, url("../../img/paper-airplane@2x.png") 2x, url("../../img/paper-airplane.png") 1x);
+    background-repeat: no-repeat;
+    top: 246px;
+    right: 55.2%;
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  @include vp-1023 {
+    min-height: 580px;
+  }
+
+  @include vp-767 {
+    min-height: 748px;
+  }
+}
+
+.feedback__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.feedback__form-wrapper {
+  margin-left: 50%;
+  margin-top: 150px;
+
+  @include vp-1023 {
+    margin-left: 8px;
+    margin-top: 31px;
+    margin-right: 11px;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+}
+
+.feedback h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-default-white;
+  margin-top: 13px;
+  margin-left: 15px;
+  margin-bottom: 0;
+
+  @include vp-1023 {
+    margin-left: 19px;
+  }
+
+  @include vp-767 {
+    font-size: 30px;
+    line-height: 140.62%;
+    margin-left: 0;
+  }
+}
+
+.feedback p {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+  margin-top: 13px;
+  margin-left: 20px;
+
+  @include vp-1023 {
+    margin-top: 8px;
+    margin-bottom: 7px;
+    margin-left: 15px;
+  }
+
+  @include vp-767 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 134.4%;
+    margin-left: 0;
+    margin-bottom: 18px;
+  }
+}
