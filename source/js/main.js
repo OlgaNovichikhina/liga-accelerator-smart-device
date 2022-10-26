@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {showMoreText} from './modules/about';
+import {scrollPage} from './modules/scroll';
 
 // ---------------------------------
 
@@ -17,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   showMoreText();
+  scrollPage();
   window.addEventListener('load', () => {
     initModals();
   });

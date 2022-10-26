@@ -60,32 +60,28 @@
             <div class="advantages__wrapper">
               <ul class="advantages__list">
                 <li class="advantages__item advantages__item--stopwatch">
-                  <svg class="advantages__icon advantages__icon--stopwatch" aria-hidden="true" focusable="false" width="35"
-                    height="35" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="advantages__icon advantages__icon--stopwatch" aria-hidden="true" focusable="false" width="35" height="35" xmlns="http://www.w3.org/2000/svg">
                     <use href="img/sprite/sprite.svg#icon-stopwatch"></use>
                   </svg>
                   <h3>Оперативные сроки</h3>
                   <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат&nbsp;и комплектующих в&nbsp;самые короткие сроки</p>
                 </li>
                 <li class="advantages__item advantages__item--providers">
-                  <svg class="advantages__icon advantages__icon--providers" aria-hidden="true" focusable="false"
-                    width="35" height="35" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="advantages__icon advantages__icon--providers" aria-hidden="true" focusable="false" width="35" height="35" xmlns="http://www.w3.org/2000/svg">
                     <use href="img/sprite/sprite.svg#icon-providers"></use>
                   </svg>
                   <h3>Крупные поставщики</h3>
                   <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей продукции.</p>
                 </li>
                 <li class="advantages__item advantages__item--confidential">
-                  <svg class="advantages__icon advantages__icon--confidential" aria-hidden="true" focusable="false" width="35"
-                    height="35" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="advantages__icon advantages__icon--confidential" aria-hidden="true" focusable="false" width="35" height="35" xmlns="http://www.w3.org/2000/svg">
                     <use href="img/sprite/sprite.svg#icon-confidential"></use>
                   </svg>
                   <h3>Полная конфиденциальность</h3>
                   <p>По желанию клиента &nbsp;мы обеспечиваем полную конфиденциальность.</p>
                 </li>
                 <li class="advantages__item advantages__item--price-tag">
-                  <svg class="advantages__icon advantages__icon--price-tag" aria-hidden="true" focusable="false" width="35"
-                    height="35" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="advantages__icon advantages__icon--price-tag" aria-hidden="true" focusable="false" width="35" height="35" xmlns="http://www.w3.org/2000/svg">
                     <use href="img/sprite/sprite.svg#icon-price-tag"></use>
                   </svg>
                   <h3>Персонализация стоимости</h3>
@@ -149,10 +145,10 @@
                 <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
                   <div class="form__container">
                     <label>
-                      <input placeholder="Имя" type="text" name="name" required>
+                      <input placeholder="Имя" type="text" name="name" minlength="1" maxlength="20" required>
                     </label>
                     <label>
-                      <input placeholder="Телефон" type="tel" name="phone" required data-tel-input maxlength="14">
+                      <input placeholder="Телефон" type="tel" name="phone" required data-tel-input maxlength="14" pattern="[\d\D\s\w\W]{14,14}">
                     </label>
                   </div>
                   <label for="question">
@@ -173,10 +169,94 @@
           </div>
         </section>
       </main>
-
-      <footer>
+      <footer class="footer">
         <div class="container">
-
+          <div class="footer__container">
+            <div class="footer__top">
+              <a class="footer__logo" href="#">
+                <picture>
+                  <source type="image/webp" srcset="img/logo/logo-desktop-tablet.webp, img/logo/logo-desktop-tablet@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="img/logo/logo-mobile.png, img/logo/logo-mobile@2x.png 2x">
+                  <img src="img/logo/logo-desktop-tablet.png" srcset="img/logo/logo-desktop-tablet@2x.png 2x" width="215" height="55" alt="Smart Device.">
+                </picture>
+              </a>
+              <ul class="footer__social-list">
+                <li class="footer__social-item">
+                  <a href="#" aria-label="Ссылка на компанию в Однокласниках">
+                    <svg class="footer__social-link" width="30" height="30">
+                      <use href="img/sprite/sprite.svg#icon-social-ok" />
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a href="#" aria-label="Ссылка на компанию в Вконтакте">
+                    <svg class="footer__social-link" width="30" height="30">
+                      <use href="img/sprite/sprite.svg#icon-social-vk" />
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a href="#" aria-label="Ссылка на компанию в Pinterest">
+                    <svg class="footer__social-link" width="30" height="30">
+                      <use href="img/sprite/sprite.svg#icon-social-pinterest" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__nav-wrapper">
+              <div class="footer__nav-block">
+                <h3>Разделы сайта</h3>
+                <button class="footer__btn footer__btn--nav" type="button" aria-label="Скрыть или показать меню"></button>
+                <ul class="footer__nav-list">
+                  <div class="footer__column-wrapper">
+                    <li class="footer__nav-item">
+                      <a href="#">О Компании</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#">Продукты</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#">Производство печатных<br> плат</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#">Монтаж печатных плат</a>
+                    </li>
+                  </div>
+                  <div class="footer__column-wrapper">
+                    <li class="footer__nav-item">
+                      <a href="#">Комплектующие</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#">Доставка</a>
+                    </li>
+                    <li class="footer__nav-item">
+                      <a href="#">Контакты</a>
+                    </li>
+                  </div>
+                </ul>
+              </div>
+              <div class="footer__contact-block">
+                <h3>Наш офис</h3>
+                <button class="footer__btn footer__btn--contact" type="button"
+                  aria-label="Скрыть или показать нашти контакты"></button>
+                <ul class="footer__contact-list">
+                  <li class="footer__contact-item footer__contact-item--address">
+                    <a class="footer__contact-link" href="#" aria-label="Адрес компании">г. Мытищи, Олимпийский проспект, д.10</a>
+                  </li>
+                  <li class="footer__contact-item">
+                    <a class="footer__contact-link" href="tel:+74955894050" aria-label="Телефон компании">+7 (495) 589-40-50</a>
+                </li>
+                <li class="footer__contact-item">
+                    <a class="footer__contact-link" href="tel:+79250038767" aria-label="Телефон компании">+7 (925) 389-58-29</a>
+                  </li>
+                  <li class="footer__contact-item">
+                    <a class="footer__contact-link" href="tel:+792692608079" aria-label="Телефон компании">+7 (925) 364-78-13</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
