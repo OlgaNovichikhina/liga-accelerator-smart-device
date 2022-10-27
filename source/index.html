@@ -145,10 +145,10 @@
                 <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
                   <div class="form__container">
                     <label>
-                      <input placeholder="Имя" type="text" name="name" minlength="1" maxlength="20" required>
+                      <input placeholder="Имя" type="text" name="name" minlength="1" maxlength="20" required data-name-input title="Имя может состоять из букв латиницы и кириллицы и содержать не менее 1 и не более 20 символов" pattern="^[а-яА-ЯёЁa-zA-Z]$">
                     </label>
                     <label>
-                      <input placeholder="Телефон" type="tel" name="phone" required data-tel-input maxlength="14" pattern="[\d\D\s\w\W]{14,14}">
+                      <input placeholder="Телефон" type="tel" name="phone" required data-tel-input maxlength="18" pattern="^[0-9]+$" title="Формат: +7 (ххх) ххх-хх-хх">
                     </label>
                   </div>
                   <label for="question">
@@ -261,15 +261,38 @@
       </footer>
     </div>
 
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
+    <!-- Модалки modal--preload-->
+    <div class="modal " data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
+          <h2>Закажите звонок</h2>
+          <p class="modal__description">Оставьте контакты, мы проконсультируем <br>вас бесплатно в удобное время</p>
+          <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="modal__form-container">
+              <label>
+                <input placeholder="Имя" type="text" name="name" minlength="1" maxlength="20" required data-modal-name-input title="Имя может состоять из букв латиницы и кириллицы и содержать не менее 1 и не более 20 символов" pattern="^[а-яА-ЯёЁa-zA-Z]$">
+              </label>
+              <label>
+                <input placeholder="Телефон" type="tel" name="phone" required data-modal-tel-input maxlength="18" pattern="^[0-9]+$" title="Формат: +7 (ххх) ххх-хх-хх">
+              </label>
+            </div>
+            <label for="question">
+              <span class="visually-hidden">Здесь Вы можете задать вопрос.</span>
+            </label>
+            <textarea placeholder="Ваш вопрос" name="question" id="question"></textarea>
+            <div class="modal__form-button-wrapper">
+              <button class="modal__button btn" type="submit">Отправить</button>
+              <label>
+                <input type="checkbox" name="consent" checked required>
+                <span class="modal__check-box"></span>
+                Я согласен на обработку персональных данных
+              </label>
+            </div>
+          </form>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite/sprite.svg#icon-close"></use>
             </svg>
           </button>
         </div>
