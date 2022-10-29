@@ -14,6 +14,8 @@ const showBlock = function (block, btn) {
 };
 
 function showFooterItem() {
+  buttonNav.classList.remove('footer__btn--nav-nojs');
+  buttonContact.classList.remove('footer__btn--contact-nojs');
   blockNav.classList.remove('footer__nav-list--nojs');
   blockContact.classList.remove('footer__contact-list--nojs');
   if (buttonNav) {

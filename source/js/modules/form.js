@@ -50,7 +50,7 @@ function inputFormName() {
 
   inputName.forEach(function (item) {
     item.addEventListener('input', () => {
-      const value = item.value.replace(/[^a-zA-ZА-Яа-яЁё]/gi, '');
+      const value = item.value.replace(/[^a-zA-ZА-Яа-яЁё'-]/gi, '');
       const nameLength = 20;
 
       let result = '';

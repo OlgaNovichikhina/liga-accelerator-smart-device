@@ -39,7 +39,7 @@
       <header class="header">
         <div class="container">
           <div class="header__container">
-            <a class="header__logo" href="#">
+            <a class="header__logo">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/logo/logo-mobile.webp, img/logo/logo-mobile@2x.webp 2x">
                 <source type="image/webp" srcset="img/logo/logo-desktop-tablet.webp, img/logo/logo-desktop-tablet@2x.webp 2x">
@@ -59,7 +59,7 @@
                 </a>
               </li>
             </ul>
-            <button class="header__button btn" type="button" data-open-modal="feedback">Заказать звонок</button>
+            <a class="header__button btn" href="#" data-open-modal="feedback">Заказать звонок</a>
           </div>
         </div>
       </header>
@@ -114,20 +114,20 @@
             </div>
           </div>
         </section>
-        <section class="about">
+        <section class="about about--nojs">
           <div class="container">
             <div class="about__wrapper">
               <div class="about__container">
                 <h2>О компании</h2>
-                <div class="about__info" data-mobile>
+                <div class="about__info about__info--mobile">
                   <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с 1997&nbsp;года. Выполняем срочные заказы&nbsp;и пилотные образцы до&nbsp;10&nbsp;дней.</p>
                   <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. <br> Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
                 </div>
-                <div class="about__info" data-more>
+                <div class="about__info about__info--more">
                   <p>Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.</p>
                   <p>Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов</p>
                 </div>
-                <button type="button" class="about__button btn" data-button>Подробнее</button>
+                <button class="about__button btn" type="button">Подробнее</button>
               </div>
             </div>
           </div>
@@ -168,10 +168,10 @@
                 <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post">
                   <div class="form__container">
                     <label>
-                      <input placeholder="Имя" type="text" name="name" minlength="1" maxlength="20" required data-name-input title="Имя может состоять из букв латиницы и кириллицы и содержать не менее 1 и не более 20 символов" pattern="^[а-яА-ЯёЁa-zA-Z]$">
+                      <input placeholder="Имя" type="text" name="name" minlength="1" maxlength="20" required data-name-input title="Имя может состоять из букв латиницы и кириллицы и содержать не менее 1 и не более 20 символов">
                     </label>
                     <label>
-                      <input placeholder="Телефон" type="tel" name="phone" required data-tel-input maxlength="18" pattern="^[0-9]+$" title="Формат: +7 (ххх) ххх-хх-хх">
+                      <input placeholder="Телефон" type="tel" name="phone" required data-tel-input maxlength="18" title="Формат: +7 (ххх) ххх-хх-хх">
                     </label>
                   </div>
                   <label for="question">
@@ -196,7 +196,7 @@
         <div class="container">
           <div class="footer__container">
             <div class="footer__top">
-              <a class="footer__logo" href="#">
+              <a class="footer__logo" href="index.html">
                 <picture>
                   <source type="image/webp" srcset="img/logo/logo-desktop-tablet.webp, img/logo/logo-desktop-tablet@2x.webp 2x">
                   <source media="(max-width: 767px)" srcset="img/logo/logo-mobile.png, img/logo/logo-mobile@2x.png 2x">
@@ -231,7 +231,7 @@
               <div class="footer__nav-block">
                 <div class="footer__title">
                   <h3>Разделы сайта</h3>
-                  <button class="footer__btn footer__btn--nav" type="button" aria-label="Скрыть или показать меню"></button>
+                  <button class="footer__btn footer__btn--nav footer__btn--nav-nojs" type="button" aria-label="Скрыть или показать меню"></button>
                 </div>
                 <ul class="footer__nav-list footer__nav-list--nojs">
                   <div class="footer__column-wrapper">
@@ -264,7 +264,7 @@
               <div class="footer__contact-block" >
                 <div class="footer__title">
                   <h3>Наш офис</h3>
-                  <button class="footer__btn footer__btn--contact" type="button" aria-label="Скрыть или показать нашти контакты"></button>
+                  <button class="footer__btn footer__btn--contact footer__btn--contact-nojs" type="button" aria-label="Скрыть или показать нашти контакты"></button>
                 </div>
                 <ul class="footer__contact-list footer__contact-list--nojs">
                   <li class="footer__contact-item footer__contact-item--address">
@@ -297,10 +297,10 @@
           <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="modal__form-container">
               <label>
-                <input placeholder="Имя" type="text" name="name" minlength="1" maxlength="20" required data-modal-name-input title="Имя может состоять из букв латиницы и кириллицы и содержать не менее 1 и не более 20 символов" pattern="^[а-яА-ЯёЁa-zA-Z]$">
+                <input placeholder="Имя" type="text" name="name" minlength="1" maxlength="20" required data-modal-name-input title="Имя может состоять из букв латиницы и кириллицы и содержать не менее 1 и не более 20 символов">
               </label>
               <label>
-                <input placeholder="Телефон" type="tel" name="phone" required data-modal-tel-input maxlength="18" pattern="^[0-9]+$" title="Формат: +7 (ххх) ххх-хх-хх">
+                <input placeholder="Телефон" type="tel" name="phone" required data-modal-tel-input maxlength="18" title="Формат: +7 (ххх) ххх-хх-хх">
               </label>
             </div>
             <label for="modal-question">

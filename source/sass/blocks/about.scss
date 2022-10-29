@@ -64,24 +64,24 @@
   }
 }
 
-[data-more] {
-  display: none;
+.about__info--more {
+  display: block;
 }
 
-[data-mobile] {
+.about__info--mobile {
   @include vp-767 {
     max-height: 210px;
     overflow: hidden;
   }
 }
 
-[data-mobile].is-open {
+.about__info--mobile.is-open {
   @include vp-767 {
     max-height: 350px;
   }
 }
 
-[data-more].is-open {
+.about__info--more.is-open {
   display: block;
 }
 
@@ -113,7 +113,7 @@
   font-size: 14px;
   line-height: 16px;
   user-select: none;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 180px;
