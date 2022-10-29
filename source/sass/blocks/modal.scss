@@ -6,6 +6,10 @@
   left: 0;
   z-index: 1000;
 
+  @include vp-1023 {
+    display: none;
+  }
+
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -61,6 +65,7 @@
 
     width: 500px;
     padding: 40px;
+    padding-left: 41px;
 
     background-color: $color-deep-sky-blue-polygon;
 
@@ -86,6 +91,7 @@
       font-size: 16px;
       line-height: 22px;
       margin-top: 6px;
+      margin-bottom: 38px;
     }
   }
 
@@ -102,6 +108,17 @@
     background: $color-transparent;
     border: none;
     cursor: pointer;
+
+    &:hover {
+      opacity: 0.4;
+    }
+
+    &:focus,
+    &:focus-visible {
+      border-radius: 50%;
+      outline: 1px solid $color-black-pearl;
+      border: 1px solid $color-black-pearl;
+    }
   }
 
   &--responsive {
@@ -143,13 +160,18 @@
   flex-direction: column;
 }
 
+.modal__content label {
+  margin-bottom: 20px;
+}
+
 .modal__content input {
   background: rgba(4, 20, 39, 0.15);
   border-radius: 3px;
-  border: none;
+  border: 1px solid transparent;
   width: 100%;
   min-height: 50px;
-  padding: 15px;
+  padding: 12px 15px 15px 15px;
+  outline: none;
 
   &::placeholder {
     font-family: "PT Mono", "Arial", sans-serif;
@@ -160,16 +182,23 @@
   }
 }
 
+.modal__content input:hover,
+.modal__content input:focus-visible,
+.modal__content textarea:hover,
+.modal__content textarea:focus-visible {
+  outline: 1px solid $color-black-pearl;
+  border: 1px solid $color-black-pearl;
+}
+
 .modal__content textarea {
   width: 100%;
   min-height: 155px;
   background: rgba(4, 20, 39, 0.15);
   border-radius: 3px;
-  border: none;
-  margin-left: 20px;
-  margin-top: 8px;
+  border: 1px solid transparent;
   padding: 15px;
   padding-top: 23px;
+  margin-bottom: 20px;
 
   &::placeholder {
     font-family: "PT Mono", "Arial", sans-serif;
@@ -188,17 +217,23 @@
 
 .modal__check-box {
   position: absolute;
-  margin-left: -26px;
-  margin-top: 8px;
-  min-width: 16px;
-  min-height: 17px;
+  margin-top: 0;
+  margin-left: -25px;
+  min-width: 14px;
+  min-height: 15px;
   background-color: transparent;
   border: 1px solid $color-default-white;
   border-radius: 2px;
   cursor: pointer;
+  outline: none;
 
   &:hover {
     opacity: 0.8;
+  }
+
+  &:focus-visible,
+  :focus {
+    border: 1px solid $color-black-pearl;
   }
 }
 
@@ -206,13 +241,17 @@
   background-image: url("../../img/svg/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 .modal__form-button-wrapper {
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
-  padding-left: 20px;
+
+  & input:hover + .modal__check-box,
+  & input:focus-visible + .modal__check-box {
+    border: 1px solid $color-black-pearl;
+  }
 }
 
 .modal__form-button-wrapper label {
@@ -223,9 +262,12 @@
   line-height: 16px;
   color: $color-default-white;
   opacity: 0.8;
+  margin-left: 34px;
+  margin-bottom: 5px;
+  cursor: pointer;
 }
 
-.form__button {
+.modal__button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -240,9 +282,10 @@
   background-color: $color-black-pearl-button;
   border-radius: 3px;
   user-select: none;
-  width: 45%;
+  width: 100%;
   min-height: 45px;
   border: none;
+  margin-bottom: 19px;
 
   &:hover {
     opacity: 0.8;
@@ -250,5 +293,11 @@
 
   &:active {
     opacity: 0.4;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 1px solid $color-default-white;
+    border: 1px solid $color-default-white;
   }
 }

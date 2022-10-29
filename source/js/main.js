@@ -4,6 +4,7 @@ import {showMoreText} from './modules/about';
 import {scrollPage} from './modules/scroll';
 import {onClickFocusInput} from './modules/focus';
 import {inputFormTel, inputFormName} from './modules/form';
+import {showFooterItem} from './modules/accordion';
 
 // ---------------------------------
 
@@ -19,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
+  showFooterItem();
   onClickFocusInput();
   inputFormTel();
   inputFormName();

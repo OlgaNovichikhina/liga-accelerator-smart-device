@@ -2,6 +2,9 @@
   width: 100%;
   background-color: $color-black-pearl;
   color: $color-default-white;
+  overflow: hidden;
+  padding-bottom: 35px;
+  flex: 0 0 auto;
 }
 
 .footer h3 {
@@ -16,6 +19,11 @@
   color: $color-default-white;
   margin-top: 6px;
   margin-bottom: 20px;
+
+  @include vp-767 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .footer__container {
@@ -24,15 +32,15 @@
   max-width: 1220px;
   margin: 0 auto;
   padding-top: 50px;
-  padding-bottom: 44px;
+  padding-bottom: 10px;
 
   @include vp-1023 {
     flex-direction: column;
-    padding: 50px 25px 60px 26px;
+    padding: 50px 25px 25px 26px;
   }
 
-  @include vp-1023 {
-    padding: 36px 25px 60px 34px;
+  @include vp-767 {
+    padding: 0;
   }
 }
 
@@ -47,6 +55,7 @@
 
   @include vp-767 {
     flex-direction: column;
+    padding: 36px 25px 0 34px;
   }
 }
 
@@ -59,20 +68,22 @@
 
   @include vp-767 {
     flex-direction: column;
+    margin-top: 23px;
   }
 }
 
 .footer__social-list {
   display: flex;
   flex-wrap: wrap;
-  width: 215px;
+  width: 190px;
   padding: 0;
   margin: 34px 0 0 15px;
   list-style: none;
 
   @include vp-1023 {
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-top: 10px;
+    width: 142px;
   }
 
   @include vp-767 {
@@ -108,14 +119,6 @@
   }
 }
 
-.footer__btn {
-  display: none;
-
-  @include vp-767 {
-    display: block;
-  }
-}
-
 .footer__nav-block {
   margin-left: 141px;
 
@@ -133,6 +136,17 @@
   @include vp-1023 {
     flex-direction: column;
   }
+
+  @include vp-767 {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 8px;
+
+    &--nojs {
+      max-height: fit-content;
+      overflow: visible;
+    }
+  }
 }
 
 .footer__nav-list li {
@@ -146,6 +160,10 @@
   font-size: 16px;
   line-height: 135%;
   color: rgba(255, 255, 255, 0.7);
+
+  @include vp-767 {
+    font-size: 14px;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -163,7 +181,7 @@
     min-width: 350px;
   }
 
-  @include vp-1023 {
+  @include vp-767 {
     min-width: 270px;
   }
 }
@@ -173,12 +191,100 @@
   margin: 0;
   list-style: none;
   max-width: 345px;
+
+  @include vp-767 {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 8px;
+
+    &--nojs {
+      max-height: fit-content;
+      overflow: visible;
+    }
+  }
 }
 
 .footer__contact-item {
   margin-bottom: 6px;
 
   &--address {
-    margin-bottom: 5px;
+    margin-bottom: 3px;
+
+    @include vp-767 {
+      margin-bottom: 11px;
+      margin-top: -9px;
+    }
+  }
+}
+
+.footer__btn {
+  display: none;
+
+  @include vp-767 {
+    width: 16px;
+    height: 16px;
+    border: none;
+    background-color: transparent;
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
+}
+
+.footer__btn::before,
+.footer__btn::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 1px;
+  background: #c4c4cc;
+  left: -2px;
+  top: 6px;
+}
+
+.footer__btn::before {
+  transform: rotate(90deg);
+}
+
+.footer__btn--active::before {
+  display: none;
+}
+
+.footer__title {
+  @include vp-767 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 22px 8px;
+  }
+}
+
+.footer__nav-block,
+.footer__contact-block {
+  @include vp-767 {
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 200%;
+      height: 1px;
+      background-color: rgba(248, 253, 255, 0.7);
+      top: 0;
+      left: -50%;
+    }
+
+    &::after {
+      top: 100%;
+    }
+  }
+}
+
+.footer__contact-block {
+  @include vp-767 {
+    padding-bottom: 10px;
   }
 }
