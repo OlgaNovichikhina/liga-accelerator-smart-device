@@ -28,7 +28,6 @@
 
 .footer__container {
   display: flex;
-  justify-content: space-between;
   max-width: 1220px;
   margin: 0 auto;
   padding-top: 50px;
@@ -36,7 +35,7 @@
 
   @include vp-1023 {
     flex-direction: column;
-    padding: 50px 25px 25px 26px;
+    padding: 50px 25px 112px 26px;
   }
 
   @include vp-767 {
@@ -64,6 +63,7 @@
 
   @include vp-1023 {
     margin-top: 31px;
+    justify-content: space-between;
   }
 
   @include vp-767 {
@@ -120,7 +120,7 @@
 }
 
 .footer__nav-block {
-  margin-left: 141px;
+  margin-left: 160px;
 
   @include vp-1023 {
     margin-left: 0;
@@ -130,14 +130,18 @@
 .footer__nav-list {
   padding: 0;
   margin: 0;
-  display: flex;
   list-style: none;
+  columns: 2 235px;
+  column-fill: auto;
+  height: 135px;
 
   @include vp-1023 {
-    flex-direction: column;
+    columns: auto;
+    column-fill: balance;
   }
 
   @include vp-767 {
+    height: 240px;
     max-height: 0;
     overflow: hidden;
     padding: 0 8px;
@@ -154,6 +158,10 @@
   margin: 0;
   list-style: none;
   max-width: 345px;
+
+  @include vp-1023 {
+    max-width: 321px;
+  }
 
   @include vp-767 {
     display: flex;
@@ -194,18 +202,6 @@
   }
 }
 
-.footer__column-wrapper {
-  min-width: 250px;
-
-  @include vp-1023 {
-    min-width: 350px;
-  }
-
-  @include vp-767 {
-    min-width: 270px;
-  }
-}
-
 .footer__contact-item {
   margin-bottom: 6px;
 
@@ -214,7 +210,7 @@
 
     & a {
       display: block;
-      padding-top: 6px;
+      padding-top: 4px;
       margin-bottom: 4px;
 
       @include vp-1023 {
@@ -305,7 +301,10 @@
 }
 
 .footer__contact-block {
+  margin-left: 14px;
+
   @include vp-767 {
     padding-bottom: 10px;
+    margin-left: 0;
   }
 }

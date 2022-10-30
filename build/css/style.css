@@ -1843,9 +1843,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   max-width: 1220px;
   margin: 0 auto;
   padding-top: 50px;
@@ -1900,16 +1897,20 @@ button,
 }
 
 .footer__nav-block {
-  margin-left: 141px;
+  margin-left: 160px;
 }
 
 .footer__nav-list {
   padding: 0;
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   list-style: none;
+  -webkit-columns: 2 235px;
+  -moz-columns: 2 235px;
+  columns: 2 235px;
+  -webkit-column-fill: auto;
+  -moz-column-fill: auto;
+  column-fill: auto;
+  height: 135px;
 }
 
 .footer__contact-list {
@@ -1942,10 +1943,6 @@ button,
   opacity: 0.4;
 }
 
-.footer__column-wrapper {
-  min-width: 250px;
-}
-
 .footer__contact-item {
   margin-bottom: 6px;
 }
@@ -1956,7 +1953,7 @@ button,
 
 .footer__contact-item--address a {
   display: block;
-  padding-top: 6px;
+  padding-top: 4px;
   margin-bottom: 4px;
 }
 
@@ -1983,6 +1980,10 @@ button,
 
 .footer__btn--active::before {
   display: none;
+}
+
+.footer__contact-block {
+  margin-left: 14px;
 }
 
 .wrapper {
@@ -2280,7 +2281,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 50px 25px 25px 26px;
+    padding: 50px 25px 112px 26px;
   }
 
   .footer__top {
@@ -2295,6 +2296,9 @@ button,
 
   .footer__nav-wrapper {
     margin-top: 31px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 
   .footer__social-list {
@@ -2314,14 +2318,16 @@ button,
   }
 
   .footer__nav-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -webkit-columns: auto;
+    -moz-columns: auto;
+    columns: auto;
+    -webkit-column-fill: balance;
+    -moz-column-fill: balance;
+    column-fill: balance;
   }
 
-  .footer__column-wrapper {
-    min-width: 350px;
+  .footer__contact-list {
+    max-width: 321px;
   }
 
   .footer__contact-item--address a {
@@ -2661,6 +2667,7 @@ button,
   }
 
   .footer__nav-list {
+    height: 240px;
     max-height: 0;
     overflow: hidden;
     padding: 0 8px;
@@ -2696,10 +2703,6 @@ button,
   .footer__nav-list a,
   .footer__contact-list a {
     font-size: 14px;
-  }
-
-  .footer__column-wrapper {
-    min-width: 270px;
   }
 
   .footer__contact-item--address {
@@ -2763,5 +2766,6 @@ button,
 
   .footer__contact-block {
     padding-bottom: 10px;
+    margin-left: 0;
   }
 }
