@@ -4,23 +4,8 @@
   color: $color-default-white;
 }
 
-.services__container {
-  max-width: 1220px;
-  margin: 0 auto;
-  padding-top: 64px;
-  padding-bottom: 125px;
-
-  @include vp-1023 {
-    padding: 55px 26px 60px;
-  }
-
-  @include vp-767 {
-    padding: 46px 20px 70px 9px;
-  }
-}
-
 .services h2 {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: $ff-roboto-condensed;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -34,32 +19,10 @@
   }
 
   @include vp-767 {
+    padding-right: 20px;
     font-size: 28px;
     line-height: 140.62%;
     margin-bottom: 30px;
-  }
-}
-
-.services p {
-  margin: 0;
-  display: block;
-  padding-top: 47px;
-  padding-left: 40px;
-  max-width: 200px;
-  font-size: 20px;
-  line-height: 30px;
-  color: $color-default-white;
-
-  @include vp-1023 {
-    padding-top: 36px;
-    padding-left: 45px;
-  }
-
-  @include vp-767 {
-    padding-top: 25px;
-    padding-left: 30px;
-    font-size: 18px;
-    line-height: 30px;
   }
 }
 
@@ -112,7 +75,7 @@
   &--production {
     background-image: image-set("../../img/services/service-card-1-desktop@2x.webp" 2x,
                                 "../../img/services/service-card-1-desktop.webp" 1x);
-    background-color: $color-black-pearl;
+    background-color: $color-bahama-blue;
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
@@ -131,7 +94,7 @@
   &--mounting {
     background-image: image-set("../../img/services/service-card-2-desktop@2x.webp" 2x,
                                 "../../img/services/service-card-2-desktop.webp" 1x);
-    background-color: $color-black-pearl;
+    background-color: $color-bahama-blue;
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
@@ -150,7 +113,7 @@
   &--accessories {
     background-image: image-set("../../img/services/service-card-3-desktop@2x.webp" 2x,
                                 "../../img/services/service-card-3-desktop.webp" 1x);
-    background-color: $color-black-pearl;
+    background-color: $color-bahama-blue;
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
@@ -180,7 +143,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  min-width: 350px;
+  max-width: 350px;
   min-height: 650px;
 
   @include vp-1023 {
@@ -190,6 +153,28 @@
 
   @include vp-767 {
     min-width: 270px;
+  }
+}
+
+.services p {
+  margin: 0;
+  padding-top: 47px;
+  padding-left: 40px;
+  max-width: 200px;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    padding-top: 36px;
+    padding-left: 45px;
+  }
+
+  @include vp-767 {
+    padding-top: 25px;
+    padding-left: 30px;
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 

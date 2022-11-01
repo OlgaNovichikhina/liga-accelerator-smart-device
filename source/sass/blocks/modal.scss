@@ -78,7 +78,7 @@
     }
 
     h2 {
-      font-family: "Roboto Condensed", "Arial", sans-serif;
+      font-family: $ff-roboto-condensed;
       font-size: 30px;
       line-height: 140.62%;
       font-weight: 400;
@@ -87,7 +87,7 @@
     }
 
     p {
-      font-family: "PT Mono", "Arial", sans-serif;
+      font-family: $ff-pt-mono;
       font-size: 16px;
       line-height: 22px;
       margin-top: 6px;
@@ -154,14 +154,9 @@
   }
 }
 
-.modal__form-container,
-.modal__form-button-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.modal__content label {
-  margin-bottom: 20px;
+.modal__form {
+  display: grid;
+  gap: 20px;
 }
 
 .modal__content input {
@@ -174,7 +169,7 @@
   outline: none;
 
   &::placeholder {
-    font-family: "PT Mono", "Arial", sans-serif;
+    font-family: $ff-pt-mono;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
@@ -198,10 +193,9 @@
   border: 1px solid transparent;
   padding: 15px;
   padding-top: 23px;
-  margin-bottom: 20px;
 
   &::placeholder {
-    font-family: "PT Mono", "Arial", sans-serif;
+    font-family: $ff-pt-mono;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
@@ -256,7 +250,7 @@
 
 .modal__form-button-wrapper label {
   width: 100%;
-  font-family: "PT Mono", "Arial", sans-serif;
+  font-family: $ff-pt-mono;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -271,7 +265,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: $ff-roboto-condensed;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;

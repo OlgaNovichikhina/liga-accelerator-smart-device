@@ -7,27 +7,6 @@
   background: $header-gradient;
 }
 
-.header__container {
-  max-width: 1220px;
-  margin: 0 auto;
-  min-height: 120px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 60px;
-
-  @include vp-1023 {
-    padding: 0 40px 0 26px;
-    min-height: 100px;
-  }
-
-  @include vp-767 {
-    padding: 0 12px 0 10px;
-    min-height: 70px;
-  }
-}
-
 .header__logo {
   padding-bottom: 5px;
   cursor: pointer;
@@ -66,7 +45,7 @@
 }
 
 .header__link {
-  font-family: "PT Mono", "Arial", sans-serif;
+  font-family: $ff-pt-mono;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
@@ -105,7 +84,7 @@
 }
 
 .header__button {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: $ff-roboto-condensed;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;

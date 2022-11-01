@@ -2,7 +2,7 @@
   position: relative;
   background-image: image-set("../../img/background/background-desktop@2x.webp" 2x,
                               "../../img/background/background-desktop.webp" 1x);
-  background-color: $color-black-pearl;
+  background-color: $color-bahama-blue;
   background-repeat: no-repeat;
   background-position: center -100px;
   object-fit: cover;
@@ -30,47 +30,36 @@
     background-size: cover;
     height: auto;
   }
-}
 
-.promo__container {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  color: $color-alice-blue-border;
-  max-width: 970px;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-}
+  & h2 {
+    display: block;
+    font-size: 80px;
+    line-height: 94px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-bottom: 36px;
 
-.promo__container h2 {
-  display: block;
-  font-size: 80px;
-  line-height: 94px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  margin-bottom: 36px;
+    @include vp-1023 {
+      font-size: 64px;
+      line-height: 75px;
+      margin-left: 26px;
+      margin-top: 44px;
+      margin-bottom: 3px;
+    }
 
-  @include vp-1023 {
-    font-size: 64px;
-    line-height: 75px;
-    margin-left: 26px;
-    margin-top: 44px;
-    margin-bottom: 3px;
-  }
-
-  @include vp-767 {
-    font-size: 36px;
-    line-height: 42px;
-    margin-top: 14px;
-    margin-left: 8px;
-    margin-bottom: 10px;
+    @include vp-767 {
+      font-size: 36px;
+      line-height: 42px;
+      margin-top: 14px;
+      margin-left: 8px;
+      margin-bottom: 10px;
+    }
   }
 }
 
 .promo__description {
   display: block;
-  font-family: "PT Mono", "Arial", sans-serif;
+  font-family: $ff-pt-mono;
   font-weight: 400;
   font-size: 22px;
   line-height: 155%;

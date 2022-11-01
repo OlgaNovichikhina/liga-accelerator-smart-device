@@ -1,7 +1,7 @@
 function inputFormTel() {
-  const inputTel = document.querySelectorAll('input[type="tel"]');
+  const INPUT_TEL = document.querySelectorAll('input[type="tel"]');
 
-  inputTel.forEach(function (item) {
+  INPUT_TEL.forEach(function (item) {
     item.addEventListener('input', () => {
       const value = item.value.replace(/\D+/g, '');
       const numberLength = 18;
@@ -38,20 +38,21 @@ function inputFormTel() {
     });
 
     item.addEventListener('blur', () => {
-      if (inputTel.value.length < 18) {
-        inputTel.value = '';
+      if (item.value.length < 18) {
+        item.value = '';
       }
     });
   });
 }
 
 function inputFormName() {
-  const inputName = document.querySelectorAll('input[type="text"]');
+  const INPUT_NAME = document.querySelectorAll('input[type="text"]');
 
-  inputName.forEach(function (item) {
+  INPUT_NAME.forEach(function (item) {
+    item.removeAttribute('pattern');
     item.addEventListener('input', () => {
-      const value = item.value.replace(/[^a-zA-ZА-Яа-яЁё'-]/gi, '');
-      const nameLength = 20;
+      const value = item.value.replace(/[^a-zA-ZА-Яа-яЁё'-\s]/gi, '');
+      const nameLength = 100;
 
       let result = '';
 

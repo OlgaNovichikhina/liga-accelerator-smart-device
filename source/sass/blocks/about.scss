@@ -1,45 +1,5 @@
-.about__wrapper {
-  max-width: 1220px;
-  margin: 0 auto;
-  display: flex;
-  padding-left: 250px;
-  padding-bottom: 120px;
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 2px;
-    width: 150px;
-    height: 320px;
-    background-image: image-set("../../img/2022@2x.webp" 2x, "../../img/2022.webp" 1x);
-  }
-
-  @include vp-1023 {
-    padding-bottom: 81px;
-    padding-left: 201px;
-    padding-right: 25px;
-
-    &::before {
-      left: 22px;
-      top: 7px;
-    }
-  }
-
-  @include vp-767 {
-    padding-bottom: 79px;
-    padding-right: 10px;
-    padding-left: 8px;
-
-    &::before {
-      display: none;
-    }
-  }
-}
-
 .about h2 {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: $ff-roboto-condensed;
   font-size: 36px;
   line-height: 51px;
   font-weight: 400;
@@ -86,7 +46,7 @@
 }
 
 .about__info p {
-  font-family: "PT Mono", "Arial", sans-serif;
+  font-family: $ff-pt-mono;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -105,7 +65,7 @@
 }
 
 .about__button {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-family: $ff-roboto-condensed;
   font-weight: 700;
   text-align: center;
   letter-spacing: 0.05em;
@@ -124,7 +84,7 @@
   background-color: transparent;
 
   @include vp-767 {
-    width: 60%;
+    width: 56%;
     max-width: 100%;
     min-height: 35px;
     font-size: 14px;

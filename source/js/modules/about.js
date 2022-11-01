@@ -1,22 +1,22 @@
-const aboutMore = document.querySelector('.about__info--more');
-const aboutButton = document.querySelector('.about__button');
-const aboutMobile = document.querySelector('.about__info--mobile');
+const ABOUT_MORE = document.querySelector('.about__info--more');
+const ABOUT_BUTTON = document.querySelector('.about__button');
+const ABOUT_MOBILE = document.querySelector('.about__info--mobile');
 
 function showMoreText() {
-  aboutMore.style.display = 'none';
-  aboutButton.style.display = 'flex';
-  aboutButton.addEventListener('click', () => {
-    aboutMore.style.display = 'none';
-    const isOpened = aboutMore.classList.contains('is-open');
-    aboutMore.classList.remove('is-open');
-    aboutMobile.classList.remove('is-open');
-    aboutButton.textContent = 'Подробнее';
+  ABOUT_MORE.style.display = 'none';
+  ABOUT_BUTTON.style.display = 'flex';
+  ABOUT_BUTTON.addEventListener('click', () => {
+    ABOUT_MORE.style.display = 'none';
+    const isOpened = ABOUT_MORE.classList.contains('is-open');
+    ABOUT_MORE.classList.remove('is-open');
+    ABOUT_MOBILE.classList.remove('is-open');
+    ABOUT_BUTTON.textContent = 'Подробнее';
 
     if (!isOpened) {
-      aboutMore.style.display = 'block';
-      aboutMore.classList.add('is-open');
-      aboutMobile.classList.add('is-open');
-      aboutButton.textContent = 'Свернуть';
+      ABOUT_MORE.style.display = 'block';
+      ABOUT_MORE.classList.add('is-open');
+      ABOUT_MOBILE.classList.add('is-open');
+      ABOUT_BUTTON.textContent = 'Свернуть';
     }
   });
 }
