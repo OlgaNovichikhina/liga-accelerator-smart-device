@@ -1,5 +1,5 @@
 .about h2 {
-  font-family: $ff-roboto-condensed;
+  font-family: $ff-main-font;
   font-size: 36px;
   line-height: 51px;
   font-weight: 400;
@@ -46,7 +46,7 @@
 }
 
 .about__info p {
-  font-family: $ff-pt-mono;
+  font-family: $ff-secondary-font;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -65,7 +65,7 @@
 }
 
 .about__button {
-  font-family: $ff-roboto-condensed;
+  font-family: $ff-main-font;
   font-weight: 700;
   text-align: center;
   letter-spacing: 0.05em;

@@ -1213,8 +1213,6 @@ button,
   background-color: #165381;
   background-repeat: no-repeat;
   background-position: center -100px;
-  -o-object-fit: cover;
-  object-fit: cover;
   width: 100%;
   min-height: 780px;
   margin-top: -100px;
@@ -2044,6 +2042,7 @@ button,
   .promo {
     background-size: cover;
     height: auto;
+    max-height: 780px;
   }
 }
 
