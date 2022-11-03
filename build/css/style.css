@@ -386,7 +386,7 @@ template {
 
 @font-face {
   font-family: "PT Mono";
-  src: url("../../fonts/PTMono-Regular.woff2") format("woff2"), url("../../fonts/PTMono-Regular.woff") format("woff");
+  src: url("../fonts/PTMono-Regular.woff2") format("woff2"), url("../fonts/PTMono-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -394,7 +394,7 @@ template {
 
 @font-face {
   font-family: "Roboto Condensed";
-  src: url("../../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../../fonts/RobotoCondensed-Bold.woff") format("woff");
+  src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -402,7 +402,7 @@ template {
 
 @font-face {
   font-family: "Roboto Condensed";
-  src: url("../../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../../fonts/RobotoCondensed-Regular.woff") format("woff");
+  src: url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../fonts/RobotoCondensed-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -681,8 +681,8 @@ button,
   top: 2px;
   width: 150px;
   height: 320px;
-  background-image: -webkit-image-set(url("../../img/2022@2x.webp") 2x, url("../../img/2022.webp") 1x);
-  background-image: image-set("../../img/2022@2x.webp" 2x, "../../img/2022.webp" 1x);
+  background-image: -webkit-image-set(url("../img/2022@2x.webp") 2x, url("../img/2022.webp") 1x);
+  background-image: image-set("../img/2022@2x.webp" 2x, "../img/2022.webp" 1x);
 }
 
 .container--services {
@@ -1028,7 +1028,7 @@ button,
 }
 
 .modal__form input:checked + .modal__check-box {
-  background-image: url("../../img/svg/icon-tick.svg");
+  background-image: url("../img/svg/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -1156,7 +1156,7 @@ button,
   width: 20px;
   left: 0;
   top: 0;
-  background: url("../../img/svg/icon-mail.svg") no-repeat center;
+  background: url("../img/svg/icon-mail.svg") no-repeat center;
 }
 
 .header__link--phone::before {
@@ -1166,7 +1166,7 @@ button,
   width: 20px;
   left: 0;
   top: 0;
-  background: url("../../img/svg/icon-phone.svg") no-repeat center;
+  background: url("../img/svg/icon-phone.svg") no-repeat center;
 }
 
 .header__link:hover {
@@ -1208,8 +1208,8 @@ button,
 
 .promo {
   position: relative;
-  background-image: -webkit-image-set(url("../../img/background/background-desktop@2x.webp") 2x, url("../../img/background/background-desktop.webp") 1x);
-  background-image: image-set("../../img/background/background-desktop@2x.webp" 2x, "../../img/background/background-desktop.webp" 1x);
+  background-image: -webkit-image-set(url("../img/background/background-desktop@2x.webp") 2x, url("../img/background/background-desktop.webp") 1x);
+  background-image: image-set("../img/background/background-desktop@2x.webp" 2x, "../img/background/background-desktop.webp" 1x);
   background-color: #165381;
   background-repeat: no-repeat;
   background-position: center -100px;
@@ -1483,15 +1483,15 @@ button,
   bottom: 0;
   right: 0;
   background-color: #00b2ff;
-  background-image: url("../../img/svg/icon-arrow-right.svg");
+  background-image: url("../img/svg/icon-arrow-right.svg");
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 3px 0 0 0;
 }
 
 .services__item--production {
-  background-image: -webkit-image-set(url("../../img/services/service-card-1-desktop@2x.webp") 2x, url("../../img/services/service-card-1-desktop.webp") 1x);
-  background-image: image-set("../../img/services/service-card-1-desktop@2x.webp" 2x, "../../img/services/service-card-1-desktop.webp" 1x);
+  background-image: -webkit-image-set(url("../img/services/service-card-1-desktop@2x.webp") 2x, url("../img/services/service-card-1-desktop.webp") 1x);
+  background-image: image-set("../img/services/service-card-1-desktop@2x.webp" 2x, "../img/services/service-card-1-desktop.webp" 1x);
   background-color: #165381;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1499,8 +1499,8 @@ button,
 }
 
 .services__item--mounting {
-  background-image: -webkit-image-set(url("../../img/services/service-card-2-desktop@2x.webp") 2x, url("../../img/services/service-card-2-desktop.webp") 1x);
-  background-image: image-set("../../img/services/service-card-2-desktop@2x.webp" 2x, "../../img/services/service-card-2-desktop.webp" 1x);
+  background-image: -webkit-image-set(url("../img/services/service-card-2-desktop@2x.webp") 2x, url("../img/services/service-card-2-desktop.webp") 1x);
+  background-image: image-set("../img/services/service-card-2-desktop@2x.webp" 2x, "../img/services/service-card-2-desktop.webp" 1x);
   background-color: #165381;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1508,8 +1508,8 @@ button,
 }
 
 .services__item--accessories {
-  background-image: -webkit-image-set(url("../../img/services/service-card-3-desktop@2x.webp") 2x, url("../../img/services/service-card-3-desktop.webp") 1x);
-  background-image: image-set("../../img/services/service-card-3-desktop@2x.webp" 2x, "../../img/services/service-card-3-desktop.webp" 1x);
+  background-image: -webkit-image-set(url("../img/services/service-card-3-desktop@2x.webp") 2x, url("../img/services/service-card-3-desktop.webp") 1x);
+  background-image: image-set("../img/services/service-card-3-desktop@2x.webp" 2x, "../img/services/service-card-3-desktop.webp" 1x);
   background-color: #165381;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1562,8 +1562,8 @@ button,
   position: absolute;
   width: 510px;
   height: 285px;
-  background-image: -webkit-image-set(url("../../img/paper-airplane@2x.webp") 2x, url("../../img/paper-airplane.webp") 1x);
-  background-image: image-set("../../img/paper-airplane@2x.webp" 2x, "../../img/paper-airplane.webp" 1x);
+  background-image: -webkit-image-set(url("../img/paper-airplane@2x.webp") 2x, url("../img/paper-airplane.webp") 1x);
+  background-image: image-set("../img/paper-airplane@2x.webp" 2x, "../img/paper-airplane.webp" 1x);
   background-repeat: no-repeat;
   top: 246px;
   right: 55.2%;
@@ -1736,7 +1736,7 @@ button,
 }
 
 .form input:checked + .form__check-box {
-  background-image: url("../../img/svg/icon-tick.svg");
+  background-image: url("../img/svg/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -2189,18 +2189,18 @@ button,
   }
 
   .services__item--production {
-    background-image: -webkit-image-set(url("../../img/services/service-card-1-tablet@2x.webp") 2x, url("../../img/services/service-card-1-tablet.webp") 1x);
-    background-image: image-set("../../img/services/service-card-1-tablet@2x.webp" 2x, "../../img/services/service-card-1-tablet.webp" 1x);
+    background-image: -webkit-image-set(url("../img/services/service-card-1-tablet@2x.webp") 2x, url("../img/services/service-card-1-tablet.webp") 1x);
+    background-image: image-set("../img/services/service-card-1-tablet@2x.webp" 2x, "../img/services/service-card-1-tablet.webp" 1x);
   }
 
   .services__item--mounting {
-    background-image: -webkit-image-set(url("../../img/services/service-card-2-tablet@2x.webp") 2x, url("../../img/services/service-card-2-tablet.webp") 1x);
-    background-image: image-set("../../img/services/service-card-2-tablet@2x.webp" 2x, "../../img/services/service-card-2-tablet.webp" 1x);
+    background-image: -webkit-image-set(url("../img/services/service-card-2-tablet@2x.webp") 2x, url("../img/services/service-card-2-tablet.webp") 1x);
+    background-image: image-set("../img/services/service-card-2-tablet@2x.webp" 2x, "../img/services/service-card-2-tablet.webp" 1x);
   }
 
   .services__item--accessories {
-    background-image: -webkit-image-set(url("../../img/services/service-card-3-tablet@2x.webp") 2x, url("../../img/services/service-card-3-tablet.webp") 1x);
-    background-image: image-set("../../img/services/service-card-3-tablet@2x.webp" 2x, "../../img/services/service-card-3-tablet.webp" 1x);
+    background-image: -webkit-image-set(url("../img/services/service-card-3-tablet@2x.webp") 2x, url("../img/services/service-card-3-tablet.webp") 1x);
+    background-image: image-set("../img/services/service-card-3-tablet@2x.webp" 2x, "../img/services/service-card-3-tablet.webp" 1x);
   }
 
   .services__item {
@@ -2522,18 +2522,18 @@ button,
   }
 
   .services__item--production {
-    background-image: -webkit-image-set(url("../../img/services/service-card-1-mobile@2x.webp") 2x, url("../../img/services/service-card-1-mobile.webp") 1x);
-    background-image: image-set("../../img/services/service-card-1-mobile@2x.webp" 2x, "../../img/services/service-card-1-mobile.webp" 1x);
+    background-image: -webkit-image-set(url("../img/services/service-card-1-mobile@2x.webp") 2x, url("../img/services/service-card-1-mobile.webp") 1x);
+    background-image: image-set("../img/services/service-card-1-mobile@2x.webp" 2x, "../img/services/service-card-1-mobile.webp" 1x);
   }
 
   .services__item--mounting {
-    background-image: -webkit-image-set(url("../../img/services/service-card-2-mobile@2x.webp") 2x, url("../../img/services/service-card-2-mobile.webp") 1x);
-    background-image: image-set("../../img/services/service-card-2-mobile@2x.webp" 2x, "../../img/services/service-card-2-mobile.webp" 1x);
+    background-image: -webkit-image-set(url("../img/services/service-card-2-mobile@2x.webp") 2x, url("../img/services/service-card-2-mobile.webp") 1x);
+    background-image: image-set("../img/services/service-card-2-mobile@2x.webp" 2x, "../img/services/service-card-2-mobile.webp" 1x);
   }
 
   .services__item--accessories {
-    background-image: -webkit-image-set(url("../../img/services/service-card-3-mobile@2x.webp") 2x, url("../../img/services/service-card-3-mobile.webp") 1x);
-    background-image: image-set("../../img/services/service-card-3-mobile@2x.webp" 2x, "../../img/services/service-card-3-mobile.webp" 1x);
+    background-image: -webkit-image-set(url("../img/services/service-card-3-mobile@2x.webp") 2x, url("../img/services/service-card-3-mobile.webp") 1x);
+    background-image: image-set("../img/services/service-card-3-mobile@2x.webp" 2x, "../img/services/service-card-3-mobile.webp" 1x);
   }
 
   .services__item {
