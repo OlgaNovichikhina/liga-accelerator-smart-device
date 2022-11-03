@@ -72,7 +72,7 @@
       top: 2px;
       width: 150px;
       height: 320px;
-      background-image: image-set("../../img/2022@2x.webp" 2x, "../../img/2022.webp" 1x);
+      background-image: image-set("../img/2022@2x.webp" 2x, "../img/2022.webp" 1x);
     }
 
     @include vp-1023 {
