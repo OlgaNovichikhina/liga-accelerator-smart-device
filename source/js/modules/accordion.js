@@ -1,6 +1,6 @@
 const BUTTON_NAV = document.querySelector('.footer__btn--nav');
 const BUTTON_CONTACT = document.querySelector('.footer__btn--contact');
-const BLOCK_NAV = document.querySelector('.footer__nav-list');
+const BLOCK_NAV = document.querySelector('.footer_nav-list-wrapper');
 const BLOCK_CONTACT = document.querySelector('.footer__contact-list');
 const FOOTER_TITLE_NAV = document.querySelector('.footer__title--nav');
 const FOOTER_TITLE_CONTACT = document.querySelector('.footer__title--contact');
@@ -18,7 +18,7 @@ const showBlock = function (block, btn) {
 function showFooterItem() {
   BUTTON_NAV.classList.remove('footer__btn--nav-nojs');
   BUTTON_CONTACT.classList.remove('footer__btn--contact-nojs');
-  BLOCK_NAV.classList.remove('footer__nav-list--nojs');
+  BLOCK_NAV.classList.remove('footer__nav-list-wrapper--nojs');
   BLOCK_CONTACT.classList.remove('footer__contact-list--nojs');
   if (FOOTER_TITLE_NAV) {
     FOOTER_TITLE_NAV.addEventListener('click', function (evt) {

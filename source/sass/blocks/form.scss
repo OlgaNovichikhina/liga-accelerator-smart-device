@@ -2,15 +2,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 31px;
-  padding: 18px 10px 13px 18px;
-
-  @include vp-1023 {
-    padding: 18px 16px 13px 18px;
-  }
 
   @include vp-767 {
     grid-template-columns: 1fr;
-    gap: 19px;
+    gap: 20px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -38,16 +33,14 @@
 }
 
 .form textarea {
-  width: 95%;
+  width: 100%;
   min-height: 155px;
   background: rgba(4, 20, 39, 0.15);
   border-radius: 3px;
   border: 1px solid transparent;
-  margin-left: 20px;
-  margin-top: 8px;
+  margin-top: 20px;
   padding: 15px;
   padding-top: 23px;
-
 
   @include vp-1023 {
     padding-top: 29px;
@@ -61,7 +54,7 @@
     min-height: 180px;
     margin-left: 0;
     margin-right: 0;
-    margin-top: 7px;
+    margin-top: 20px;
     padding-top: 23px;
   }
 
@@ -84,9 +77,16 @@
 
 .form input[type="checkbox"] {
   position: absolute;
-  right: 1000000px;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
 }
-
 
 .form__check-box {
   position: absolute;
@@ -121,12 +121,10 @@
   justify-content: space-between;
   align-items: flex-end;
   padding-top: 30px;
-  padding-left: 20px;
 
   @include vp-1023 {
     justify-content: flex-start;
     align-items: center;
-    padding-left: 17px;
   }
 
   @include vp-767 {
@@ -141,7 +139,7 @@
 }
 
 .form__button-wrapper label {
-  width: 52%;
+  width: 51%;
   min-width: 150px;
   font-family: $ff-secondary-font;
   font-weight: 400;
@@ -180,9 +178,10 @@
   background-color: $color-black-pearl-button;
   border-radius: 3px;
   user-select: none;
-  width: 45%;
+  width: 46%;
   min-height: 45px;
   border: none;
+  padding-top: 12px;
 
   &:hover {
     opacity: 0.8;
@@ -200,7 +199,7 @@
 
   @include vp-1023 {
     margin-right: 68px;
-    width: 39%;
+    width: 40%;
   }
 
   @include vp-767 {

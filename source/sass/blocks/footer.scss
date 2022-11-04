@@ -36,8 +36,16 @@
   }
 
   @include vp-767 {
+    align-items: center;
+
     flex-direction: column;
-    padding: 36px 25px 0 34px;
+    padding: 36px 30px 0 34px;
+  }
+}
+
+.footer__logo {
+  @include vp-767 {
+    margin-left: -8px;
   }
 }
 
@@ -62,24 +70,30 @@
   flex-wrap: wrap;
   width: 190px;
   padding: 0;
-  margin: 34px 0 0 15px;
+  margin: 30px 0 0 10px;
   list-style: none;
 
   @include vp-1023 {
     justify-content: flex-start;
-    margin-top: 10px;
-    width: 142px;
+    margin-top: 4px;
+    width: 150px;
   }
 
   @include vp-767 {
     flex-direction: row;
     justify-content: flex-start;
-    margin-top: 20px;
-    margin-left: 41px;
+    margin-top: 15px;
+    margin-left: 0;
   }
 }
 
-.footer__social-list a {
+.footer__social-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+
   &:hover {
     opacity: 0.8;
   }
@@ -90,9 +104,9 @@
 }
 
 .footer__social-item {
-  min-width: 30px;
-  min-height: 30px;
-  margin-right: 25px;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
   cursor: pointer;
 
   &:nth-child(3n) {
@@ -100,7 +114,7 @@
   }
 
   @include vp-1023 {
-    margin-right: 26px;
+    margin-right: 15px;
   }
 }
 
@@ -118,22 +132,15 @@
   }
 }
 
-.footer__nav-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  columns: 2 205px;
-  column-fill: auto;
-  height: 135px;
+.footer_nav-list-wrapper {
+  display: flex;
 
   @include vp-1023 {
-    columns: auto;
-    column-fill: balance;
+    flex-direction: column;
   }
 
   @include vp-767 {
     width: 100%;
-    height: 240px;
     max-height: 0;
     overflow: hidden;
     padding: 0 8px;
@@ -142,6 +149,16 @@
       max-height: fit-content;
       overflow: visible;
     }
+  }
+}
+
+.footer__nav-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &--first {
+    margin-right: 48px;
   }
 }
 
@@ -182,6 +199,8 @@
   font-size: 16px;
   line-height: 135%;
   color: rgba(255, 255, 255, 0.7);
+  min-width: 220px;
+  min-height: auto;
 
   @include vp-767 {
     font-size: 14px;
@@ -296,9 +315,11 @@
 
 .footer__contact-block {
   margin-left: 14px;
+  margin-right: 4px;
 
   @include vp-767 {
     padding-bottom: 10px;
     margin-left: 0;
+    margin-right: 0;
   }
 }

@@ -1,7 +1,7 @@
 .advantages__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 300px);
+  grid-template-rows: none;
   column-gap: 33px;
   row-gap: 30px;
   margin: 0;
@@ -9,14 +9,12 @@
   list-style: none;
 
   @include vp-1023 {
-    column-gap: 30px;
+    column-gap: 27px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 360px);
   }
 
   @include vp-767 {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 340px) repeat(2, 325px);
   }
 }
 
@@ -59,6 +57,7 @@
   border: 1px solid $color-whisper-border;
   border-left: 1px solid transparent;
   position: relative;
+  min-height: 300px;
 
   &::before {
     position: absolute;
@@ -116,25 +115,45 @@
     }
   }
 
+  @include vp-1023 {
+    padding: 40px 40px 30px 46px;
+    min-height: 360px;
+  }
+
   @include vp-767 {
+    min-height: 340px;
     padding-top: 27px;
     padding-left: 29px;
     padding-right: 30px;
   }
 }
 
-.advantages__item--price-tag h3 {
-  @include vp-1023 {
-    margin-bottom: 6px;
+.advantages__item--price-tag {
+  @include vp-767 {
+    min-height: 325px;
   }
 
-  @include vp-767 {
-    margin-bottom: 15px;
+  & h3 {
+    @include vp-1023 {
+      margin-bottom: 6px;
+      margin-top: -2px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 14px;
+      margin-top: 1px;
+    }
   }
 }
 
-.advantages__item--confidential h3 {
+.advantages__item--confidential {
   @include vp-767 {
-    margin-bottom: 15px;
+    min-height: 325px;
+  }
+
+  & h3 {
+    @include vp-767 {
+      margin-bottom: 15px;
+    }
   }
 }

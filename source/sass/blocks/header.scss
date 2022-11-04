@@ -5,6 +5,11 @@
   top: 0;
   left: 0;
   background: $header-gradient;
+
+  @include vp-1023 {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .header__logo {
@@ -44,6 +49,15 @@
   }
 }
 
+.header__item {
+  min-width: 210px;
+
+  @include vp-1023 {
+    min-width: 20px;
+    width: 20px;
+  }
+}
+
 .header__link {
   font-family: $ff-secondary-font;
   font-weight: 400;
@@ -53,6 +67,7 @@
   position: relative;
   color: $color-alice-blue;
   cursor: pointer;
+  min-width: 210px;
 
   &--mail::before {
     position: absolute;
@@ -81,6 +96,11 @@
   &:active {
     opacity: 0.4;
   }
+
+  @include vp-1023 {
+    min-width: 20px;
+    width: 20px;
+  }
 }
 
 .header__button {
@@ -94,6 +114,7 @@
   border: 1px solid $color-alice-blue-border;
   border-radius: 3px;
   min-width: 160px;
+  max-width: 300px;
   margin-bottom: 10px;
   padding: 7px 15px 12px 15px;
   background-color: transparent;
